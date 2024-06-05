@@ -1,8 +1,12 @@
 import Hero from "../Hero/Hero.jsx";
+import ScrollSection from "../ScrollSection/ScrollSection.jsx";
 
 const Home = () => {
   return (
-    <Hero/>
+    <div>
+      <Hero/>
+      <ScrollSection/>
+    </div>
   )
 }
 
