@@ -8,3 +8,7 @@
   font-family: 'MontSerrat', sans-serif;
   letter-spacing: -.5px;
 }
+
+.container {
+  margin: 2rem auto;
+}
