@@ -1,10 +1,10 @@
-import AboutImg from './AboutImg.svg';
-import Layout1 from "../Layout1/Layout1";
+import AboutSectionImg from './AboutSectionImg.svg';
+import Layout1 from '../Layout1/Layout1';
 
 const AboutSection = () => {
   return (
     <section className="about-section">
-        <Layout1 pathImg={AboutImg} title={"MiDonApp"} text={"Es una iniciativa que busca mejorar la convivencia social y <span class='bold'>conectar</span> a aquellas personas que estén dispuestas a ayudar con quienes necesitan de nuestra ayuda."} buttonContent={"Quiero saber más!"}  />
+        <Layout1 pathImg={AboutSectionImg} title={"Sobre Nosotros"} text={"Somos un grupo de jóvenes <span class='bold'>inquietos e inquietados por el otro, siendo y persiguiendo  una sociedad mejor</span> mientras nos ponemos en acción."} buttonContent={"Conocénos"} reverse={"reverse"} />
     </section>
   )
 }
