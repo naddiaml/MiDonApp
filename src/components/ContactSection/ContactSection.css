@@ -1,0 +1,14 @@
+#contact-section {
+    margin: 8rem auto 2rem;
+    .section__text-container {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    
+        p {
+            width: 50%;
+            line-height: 1.7rem;
+            margin: 1rem auto 2rem;
+        }
+    }
+}
