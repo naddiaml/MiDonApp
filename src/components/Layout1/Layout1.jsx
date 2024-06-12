@@ -10,7 +10,7 @@ const Layout1 = ({pathImg, title, text, buttonContent, reverse}) => {
         <div className="layout1__item">
             <span className='title'>{title}</span>
             <p className="text" dangerouslySetInnerHTML={{ __html: text }}></p>
-            <CtaButton content={buttonContent}/>
+            {buttonContent && <CtaButton content={buttonContent} />}
         </div>
     </div>
   )

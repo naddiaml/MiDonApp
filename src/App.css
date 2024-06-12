@@ -10,5 +10,14 @@
 }
 
 .container {
-  margin: 10rem auto;
+  margin: 5rem auto;
+}
+
+.main-section__container {
+  margin: 5rem auto;
+}
+
+span.bold {
+  font-weight: bold;
+  color: #3F3D56;
 }

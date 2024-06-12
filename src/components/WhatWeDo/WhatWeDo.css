@@ -1,0 +1,28 @@
+.main-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+
+        span.intro__subtitle {
+            display: block;
+            margin-top: 3rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        p {
+            line-height: 1.8rem;
+            margin: 1rem auto;
+            width: 50%;
+        }
+
+        img {
+            margin: 1rem auto;
+            width: 40%;
+        }
+    }
+}

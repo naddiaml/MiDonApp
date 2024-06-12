@@ -14,7 +14,7 @@
         }
 
         &:last-child {
-            width: 35%;
+            width: 40%;
             flex-direction: column;
             text-align: center;
 
@@ -27,11 +27,6 @@
                     font-size: 1.2rem;
                     font-weight: 700;
                 }
-
-                &.bold {
-                    font-weight: bold;
-                    color: #3F3D56;
-                } 
             }
         }
     }
