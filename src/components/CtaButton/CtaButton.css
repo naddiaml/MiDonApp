@@ -1,0 +1,19 @@
+.cta-button {
+    button {
+        padding: .5rem 1rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: #93B4D4;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #81a1c1;
+        }
+
+        span {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #f7f7f7;
+        }
+    }
+}
