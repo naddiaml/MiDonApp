@@ -1034,7 +1034,7 @@ body.map-body .map-container #map .gm-ui-hover-effect span {
 }
 html.map-html .map-container #map .gm-style-iw.gm-style-iw-c,
 body.map-body .map-container #map .gm-style-iw.gm-style-iw-c {
-  max-width: 8 0vw !important;
+  max-width: 80vw !important;
 }
 html.map-html .map-container #map #content,
 body.map-body .map-container #map #content {
@@ -1161,9 +1161,10 @@ body.map-body .map-container #map #content #bodyContent .adInfo:hover {
 html.map-html #sidebar,
 body.map-body #sidebar {
   height: 92%;
+  width: 22rem;
   overflow-y: scroll;
   position: fixed;
-  top: 3.5rem;
+  top: 4rem;
   left: 0;
   background-color: #ffffff;
   padding: 15px;
@@ -1215,6 +1216,7 @@ body.map-body #sidebar nav {
 html.map-html #sidebar h6,
 body.map-body #sidebar h6 {
   display: inline-block;
+  margin-top: 0.5rem;
 }
 html.map-html #sidebar button,
 body.map-body #sidebar button {
@@ -1341,6 +1343,7 @@ body.map-body #sidebar .category-checkbox {
   html.map-html #sidebar,
   body.map-body #sidebar {
     width: 18rem;
+    top: 3.5rem;
   }
 }
 

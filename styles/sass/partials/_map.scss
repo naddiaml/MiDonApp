@@ -40,7 +40,7 @@ body.map-body {
                 }
             }
             .gm-style-iw.gm-style-iw-c {
-                max-width: 8 0vw !important;
+                max-width: 80vw !important;
             }
 
             #content {
@@ -131,9 +131,10 @@ body.map-body {
     // Estilo del contenedor con los checkboxes
     #sidebar {
         height: 92%;
+        width: 22rem;
         overflow-y: scroll;
         position: fixed;
-        top: 3.5rem;
+        top: 4rem;
         left: 0;
         background-color: $white;
         padding: 15px;
@@ -177,6 +178,7 @@ body.map-body {
 
         h6 {
             display: inline-block;
+            margin-top: .5rem;
         }
 
         button {
@@ -308,6 +310,7 @@ body.map-body {
 
         @include breakpoint {
             width: 18rem;
+            top: 3.5rem;
         }
     }
 }
