@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Estilos de intl-tel-input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <!-- Estilos de SweetAlert2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui@5.0.15/material-ui.min.css"
+        rel="stylesheet">
+    <!-- Link BootStrap v4.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Script Font Awesome -->
+    <script src="https://kit.fontawesome.com/8e95fe90e4.js" crossorigin="anonymous"></script>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../styles/css/styles.css">
+    <title>MiDonApp | Agregando tu organización</title>
+</head>
+
+<body>
+    <div class="modal-addOrg">
+        <div class="modal__close" onclick="volverAtras();">
+            <span>
+                <i class="fa-solid fa-arrow-left"></i>
+                Volver atrás
+            </span>
+        </div>
+        <h2>Carguemos tu organización ✍🏻</h2>
+        <form id="registrationForm" onsubmit="process(event); submitForm();">
+
+            <div class=" progress-bar-container">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <span class="step-description">Datos del referente</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-description">Datos de la organización</span>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-description">Confirmación</span>
+                </div>
+            </div>
+            <!-- Pantalla de información -->
+            <div id="infoScreen">
+                <div class="about-container">
+                    <div class="about__icon">
+                        <i class="fa-regular fa-circle-question"></i>
+                    </div>
+                    <div class="about__text">
+                        <p>El siguiente formulario consta de tres etapas:</p>
+                        <p>En un primer lugar, vamos a pedirte los datos de una <b>persona de referencia</b> con la que
+                            nos
+                            comunicaremos lo más pronto posible para continuar con el proceso de carga de la
+                            organización.</p>
+                        <p>Luego, vamos a pedirte <b>datos básicos de la organización que te gustaría sumar</b> (nombre,
+                            dirección,
+                            datos de contacto y cosas que recibirían en ese lugar).</p>
+                        <p>Finalmente, vamos a pedirte que confirmes si los datos que nos fuiste brindando son
+                            correctos.
+                            Comencemos!</p>
+                    </div>
+                </div>
+                <div class="form__button-container">
+                    <button type="button" onclick="nextStep(0)">Comenzar</button>
+                </div>
+            </div>
+            <!-- Paso 1 · Datos del referente -->
+            <div id="step1" class="step-cont">
+                <!-- Nombre -->
+                <div class="row">
+                    <label for="nombreReferente">Nombre del referente de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="nombreReferente" placeholder="Nombre del referente" name="nombreReferente">
+                </div>
+                <!-- Apellido -->
+                <div class="row">
+                    <label for="apellidoReferente">Apellido del referente de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="apellidoReferente" placeholder="Apellido del referente"
+                        name="apellidoReferente">
+                </div>
+                <!-- Email -->
+                <div class="row">
+                    <label for="emailReferente">E-mail del referente de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input type="email" name="emailReferente" id="emailReferente" placeholder="nombre@dominio.com">
+                </div>
+                <!-- Teléfono -->
+                <div class="row">
+                    <label for="telefonoReferente">Teléfono del referente de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input id="telefonoReferente" type="tel" name="telefonoReferente" />
+                </div>
+                <div class="form__button-container">
+                    <button type="button" onclick="nextStep(1)" class="btn-nextStep">Continuar</button>
+                </div>
+            </div>
+            <!-- Paso 2 · Datos de la organización -->
+            <div id="step2" class="step-cont">
+                <!-- Nombre -->
+                <div class="row">
+                    <label for="nombreOrg">Nombre de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="nombreOrg" placeholder="Nombre de la organización" name="nombreOrg">
+                </div>
+                <!-- Provincia -->
+                <div class="row">
+                    <label for="selectProvincias">Provincia
+                        <span class="required">*</span>
+                    </label>
+                    <select id="selectProvincias" name="provincia">
+                        <option value="Elige una provincia">Elige una provincia</option>
+                    </select>
+                </div>
+                <!-- Municipios -->
+                <div class="row">
+                    <label for="selectMunicipios">Municipio/departamento
+                        <span class="required">*</span>
+                    </label>
+                    <select id="selectMunicipios" name="municipio/departamento">
+                        <option value="Elige un municipio">Elige un municipio/departamento</option>
+                    </select>
+                </div>
+                <!-- Dirección -->
+                <div class="row">
+                    <label for="direccionOrg">Dirección
+                        <span class="required">*</span>
+                    </label>
+                    <input type="text" id="direccionOrg" placeholder="Dirección de la organización" name="direccionOrg">
+                </div>
+                <!-- Número de contacto de la organización -->
+                <div class="row">
+                    <label for="telefonoOrg">Teléfono de contacto de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input id="telefonoOrg" type="tel" name="telefonoOrg" />
+                </div>
+                <!-- Email -->
+                <div class="row">
+                    <label for="emailOrg">E-mail de contacto de la organización
+                        <span class="required">*</span>
+                    </label>
+                    <input type="email" name="emailOrg" id="emailOrg" placeholder="nombre@dominio.com">
+                </div>
+                <div class="form__button-container">
+                    <button type="button" onclick="prevStep(2)" class="btn-previousStep">Anterior</button>
+                    <button type="button" onclick="nextStep(2)" class="btn-nextStep">Siguiente</button>
+                </div>
+            </div>
+
+            <div id="step3" class="step-cont">
+                <h4>Confirmación</h4>
+                <div class="confirmacion-s3">
+                    <p id="confirmationNombreReferente"></p>
+                    <p id="confirmationApellidoReferente"></p>
+                    <p id="confirmationEmailReferente"></p>
+                    <p id="confirmationTelReferente"></p>
+                    <p id="confirmationNombreOrg"></p>
+                    <p id="confirmationProvincia"></p>
+                    <p id="confirmationMunicipioODepartamento"></p>
+                    <p id="confirmationDireccionOrg"></p>
+                    <p id="confirmationTelOrg"></p>
+                    <p id="confirmationEmailOrg"></p>
+                </div>
+                <div class="form__button-container">
+                    <div class="form__button-container">
+                        <button type="button" onclick="prevStep(3)" class="btn-previousStep">Anterior</button>
+                        <button type="submit" onclick="submitForm()" class="btn-nextStep">Confirmar</button>
+                    </div>
+                </div>
+                <!-- Para funcionamiento del form submit -->
+                <input type="hidden" name="_next" value="">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Nueva organización">
+        </form>
+    </div>
+
+    <script>
+        const telReferente = document.querySelector("#telefonoReferente");
+        const inputTelReferente = window.intlTelInput(telReferente, {
+            preferredCountries: ["ar", "uy", "py", "cl", "pe", "bol", "us"],
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+        const telOrganizacion = document.querySelector("#telefonoOrg");
+        const inputTelOrganizacion = window.intlTelInput(telOrganizacion, {
+            preferredCountries: ["ar", "uy", "py", "cl", "pe", "bol", "us"],
+            utilsScript:
+                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        });
+
+        const selectProvincias = document.getElementById("selectProvincias");
+        const selectMunicipiosODepartamentos = document.getElementById("selectMunicipios");
+
+        function provincia() {
+            fetch("https://apis.datos.gob.ar/georef/api/provincias")
+                .then(res => res.ok ? res.json() : Promise.reject(res))
+                .then(json => {
+                    const provinciasArray = json.provincias.map(provincia => provincia.nombre);
+                    const provinciasOrdenadas = provinciasArray.sort((a, b) => a.localeCompare(b));
+
+                    let options = `<option value="Elige una provincia">Elige una provincia</option>`;
+
+                    provinciasOrdenadas.forEach(el => options += `<option value="${el}">${el}</option>`);
+
+                    selectProvincias.innerHTML = options;
+                })
+                .catch(error => {
+                    let message = error.statusText || "Ocurrió un error";
+
+                    selectProvincias.nextElementSibling.innerHTML = `Error: ${error.status}: ${message}`;
+                })
+        }
+
+        document.addEventListener("DOMContentLoaded", provincia)
+
+        function municipioODepartamento(provincia) {
+            const urlMunicipios = `https://apis.datos.gob.ar/georef/api/municipios?provincia=${provincia}&max=529`;
+            const urlDepartamentos = `https://apis.datos.gob.ar/georef/api/departamentos?provincia=${provincia}&max=529`;
+
+            Promise.all([
+                fetch(urlMunicipios).then(response => response.json()),
+                fetch(urlDepartamentos).then(response => response.json())
+            ])
+                .then(([municipios, departamentos]) => {
+                    const opciones = [];
+
+                    municipios.municipios.forEach(el => opciones.push(el.nombre)); // Agregar solo el nombre
+                    departamentos.departamentos.forEach(el => opciones.push(el.nombre)); // Agregar solo el nombre
+
+                    const opcionesUnicas = Array.from(new Set(opciones));
+
+                    opcionesUnicas.sort((a, b) => a.localeCompare(b));
+
+                    const options = opcionesUnicas.map(el => `<option>${el}</option>`).join('');
+
+                    selectMunicipiosODepartamentos.innerHTML = `<option value="">Elige un municipio/departamento</option>${options}`;
+                })
+                .catch(error => {
+                    let message = error.statusText || "Ocurrió un error";
+
+                    selectMunicipiosODepartamentos.nextElementSibling.innerHTML = `Error: ${error.status}: ${message}`;
+                });
+        }
+
+        selectProvincias.addEventListener("change", e => {
+            municipioODepartamento(e.target.value);
+            console.log(e.target.value)
+        })
+
+        $(document).ready(function () {
+            $('#recibe').multiselect({
+                includeSelectAllOption: true,
+            });
+        });
+
+    </script>
+    <script src="../js/addOrg.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

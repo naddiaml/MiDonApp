@@ -1,0 +1,50 @@
+.rlayout {
+    width: 60%;
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: 15rem;
+        margin: auto;
+    }
+
+    .rlayout__text-container {
+        width: 50%;
+        text-align: center;
+
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    &.reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.rlayout,
+.rlayout.reverse {
+    @include largeBreakpoint {
+        margin: 2rem auto;
+        width: 80%;
+
+        img {
+            margin: 0 auto 2rem;
+        }
+
+        .rlayout__text-container {
+            width: 50%;
+        }
+    }
+
+    @include breakpoint {
+        flex-direction: column;
+
+        .rlayout__text-container {
+            width: 80%;
+        }
+    }
+}

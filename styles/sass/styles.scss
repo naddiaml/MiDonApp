@@ -1,0 +1,31 @@
+/* Partials */
+
+    /* Media Queries */
+    @import 'base/_media.scss';
+
+    /* Archivo específico para variables */
+    @import 'base/_variables.scss';
+
+    /* Archivo específico para mixins */
+    @import 'base/_mixins.scss';
+
+    /* Archivo Reset con estilos universales */
+    @import 'base/_reset.scss';
+
+    /* Layouts */
+    @import 'partials/_rlayout.scss';
+    @import 'partials/_clayout.scss';
+
+    /* Components */
+    @import 'partials/_deco.scss'; // Deco
+    @import 'partials/_cta-button.scss'; // CTA Button
+
+    @import 'partials/_header.scss';
+    @import 'partials/_hero.scss';
+    @import 'partials/_scroll-section.scss';
+    @import 'partials/_donate-section.scss';
+    @import 'partials/_contact-form.scss';
+    @import 'partials/_footer.scss';
+
+    @import 'partials/_addOrg.scss';
+    @import 'partials/_map.scss';

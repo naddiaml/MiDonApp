@@ -1,0 +1,295 @@
+// Hace que el mapa llene el tamaño asignado respecto un 100% de alto. Si se elimina el mapa no se muestra
+html.map-html,
+body.map-body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    .map-container {
+        display: flex;
+        height: calc(100% - 3.5rem);
+
+        // Contenedor del mapa
+        #map {
+            width: 100%;
+            height: 100%;
+            margin-left: 22rem;
+            transition: margin-left .5s;
+
+            &.crop {
+                margin-left: 5vw;
+                transition: margin-left .5s;
+
+                @include largeBreakpoint {
+                    margin-left: 12vw;
+                }
+            }
+
+            .gm-ui-hover-effect {
+                top: 0 !important;
+                right: -5px !important;
+
+                & span {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+            }
+
+            #content {
+                margin: .8rem;
+                width: 25vw;
+                font-size: .8rem;
+
+                .firstHeading {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-top: -.5rem;
+                    line-height: 1.1rem;
+                    z-index: 100;
+                }
+
+                #separator {
+                    width: 100%;
+                    background-color: #e3e3e3;
+                    height: 1px;
+                    margin: .5rem auto;
+                }
+
+                #bodyContent {
+                    display: flex;
+                    flex-direction: column;
+
+                    & span {
+                        margin: .2rem 0;
+
+                        .icon {
+                            width: 1rem;
+                            height: 1rem;
+                            margin-right: .3rem;
+                            opacity: .5;
+                        }
+
+                        .viewOnMaps {
+                            margin: 5px 1.3rem;
+                            text-decoration: none;
+                        }
+                    }
+
+                    div#recibe-cont {
+                        margin-left: 1.2rem;
+                        line-height: 1.2rem;
+
+                        & p {
+                            & span {
+                                margin: 0;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                    .adInfo {
+                        width: 5rem;
+                        margin: .2rem 0;
+                        padding: .5rem;
+                        align-self: flex-end;
+                        border: none;
+                        border-radius: 2rem;
+                        outline: none;
+                        font-size: .8rem;
+                        font-weight: 600;
+                        background-color: #8fd3f4; // Color hexadecimal inicial
+
+                        &:hover {
+                            @include gradientAnimation; // Incluye la animación al hacer hover
+                        }
+                    }
+                }
+
+                @include breakpoint {
+                    width: 30vw;
+                }
+            }
+        }
+    }
+
+    // Estilo del contenedor con los checkboxes
+    #sidebar {
+        height: 92%;
+        overflow-y: scroll;
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        background-color: $white;
+        width: 22rem;
+        padding: 15px;
+        transition: width 0.5s;
+        margin-top: 0;
+
+        &.closebtn {
+            height: 100%;
+            width: 5vw;
+            top: 3.2rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &>h6,
+            div.divider,
+            nav {
+                display: none;
+                opacity: 0;
+                transition: opacity .8s;
+            }
+
+            &>nav {
+                position: absolute;
+                left: -10rem;
+                width: fit-content;
+            }
+
+            @include largeBreakpoint {
+                width: 12vw;
+            }
+        }
+
+        &>h6,
+        div.divider,
+        nav {
+            opacity: 1;
+            transition: opacity .8s;
+        }
+
+        h6 {
+            display: inline-block;
+        }
+
+        button {
+            transform: rotate(0);
+            transition: transform 0.3s ease;
+            width: 2rem;
+            height: 2rem;
+            border: none;
+            outline: none !important;
+            background-color: $white;
+            color: $dark-blue;
+            position: relative;
+            float: right;
+        }
+
+        .rotate {
+            transform: rotate(180deg); // Aplica rotación al botón de toggle
+        }
+
+        .divider {
+            display: block;
+        }
+
+        label {
+            display: block;
+        }
+
+        /* Opcional: ajustar los íconos */
+        .icon {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        &.close .icon {
+            opacity: 0; // Ocultar los íconos cuando el sidebar está cerrado
+        }
+
+        nav {
+            ul {
+                list-style: none;
+
+                li {
+                    label {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: flex-end;
+                        align-items: center;
+                        font-size: 1rem;
+                        margin: 1rem auto 0;
+                        font-weight: bold;
+                        cursor: pointer;
+                        color: #A5A5A5;
+                        font-size: .9rem;
+
+                        div.icon {
+                            width: 2.2rem;
+                            height: 2.2rem;
+                            margin-right: 1rem;
+                            border-radius: 50%;
+                            background-color: #CFCFCF;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            & svg {
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                fill: #a5a5a5;
+                            }
+                        }
+
+                        input[type=checkbox] {
+                            accent-color: $light-blue;
+                            position: absolute;
+                            right: 1rem;
+                        }
+
+                        input[type="checkbox"]:checked~div.icon {
+                            background-color: $light-blue;
+
+                            svg {
+                                fill: $dark-blue;
+                            }
+                        }
+
+                        input[type="checkbox"]:checked~.category-name {
+                            color: $light-blue;
+                        }
+
+                        /* Cambios para reflejar el estilo de checked en el label */
+                        &.checked, input[type="checkbox"]:checked~label {
+                            color: $light-blue; // Cambiar el color del texto cuando está checked
+                        }
+
+                        &.unchecked, input[type="checkbox"]:not(:checked)~label {
+                            color: #A5A5A5; // Cambiar el color del texto cuando no está checked
+                        }
+                    }
+
+                    .subcategories {
+                        li>label {
+                            margin: .1rem auto .5rem;
+                            width: 60%;
+                            font-weight: 400;
+                            color: #A5A5A5;
+                            font-size: .9rem;
+                            display: flex;
+                            align-items: flex-start;
+
+                            &::after {
+                                content: '·';
+                                margin-right: .5rem;
+                            }
+
+                            input[type="checkbox"]:checked~.subcategory-name {
+                                color: #000000c0;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .category-checkbox {
+            margin-right: 10px;
+        }
+    }
+}

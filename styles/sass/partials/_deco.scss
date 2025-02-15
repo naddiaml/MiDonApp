@@ -1,0 +1,83 @@
+
+.blob-container {
+    position: absolute;
+    height: 30rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    top: 90rem;
+    overflow: hidden;
+    z-index: -100;
+
+    @include breakpoint {
+        top: 90rem;
+    }
+
+    img {
+        width: 20rem;
+        position: relative;
+        z-index: -10;
+    }
+
+    &.right {
+        right: 0;
+        img {
+            right: -10rem;
+            
+            @include breakpoint {
+                right: -15rem;
+            }
+        }
+    }
+
+    &.left {
+        left: 0;
+        img {
+            left: -10rem;
+            
+            @include breakpoint {
+                left: -15rem;
+            }
+        }
+    }
+
+    &.t40 {
+        top: 40rem;        
+            
+        @include breakpoint {
+            top: 23rem;
+        }
+    }
+
+    &.t60 {
+        top: 60rem;
+            
+        @include breakpoint {
+            top: 42rem;
+        }
+    }
+
+    &.t80 {
+        top: 80rem;
+    }
+
+    &.t90 {
+        top: 90rem;
+    }
+}
+
+.divider {
+    height: 1px;
+    width: 70%;
+    margin: auto;
+    background-color: $gray;
+
+    @include breakpoint {
+        margin: 2rem auto;
+    }
+
+    &.w100 {
+        width: 100%;
+        margin: 1rem auto;
+    }
+}

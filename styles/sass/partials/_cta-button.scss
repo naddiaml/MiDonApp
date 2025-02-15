@@ -1,0 +1,20 @@
+.cta-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    .cta__button {
+        width: 14rem;
+        padding: 1rem;
+        font-weight: 600;
+        color: $white;
+        border: none;
+        border-radius: 2rem;
+        transition: 0.5s;
+        background-color: $light-blue;
+        cursor: pointer;
+    }
+}

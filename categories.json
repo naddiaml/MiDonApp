@@ -1,0 +1,73 @@
+{
+    "categorias": [
+        {
+            "nombre": "Alimentos",
+            "subcategorias": [
+                "Perecederos",
+                "No perecederos"
+            ]
+        },
+        {
+            "nombre": "Ropa",
+            "subcategorias": [
+                "Bebés",
+                "Niños",
+                "Adultos"
+            ]
+        },
+        {
+            "nombre": "Artículos para bebés",
+            "subcategorias": [
+                "Pañales",
+                "Cunas, cochecitos, etc.",
+                "Juguetes"
+            ]
+        },
+        {
+            "nombre": "Material escolar",
+            "subcategorias": [
+                "Útiles escolares",
+                "Mochilas, bolsos, cartucheras, etc.",
+                "Hojas, cartulinas, afiches, mapas, etc."
+            ]
+        },
+        {
+            "nombre": "Tecnología",
+            "subcategorias": [
+                "Cámara de fotos/video",
+                "Impresoras",
+                "Celulares o tablets",
+                "Computadoras",
+                "Otros (Cámaras, micrófonos, mouse, teclados, etc.)"
+            ]
+        },
+        {
+            "nombre": "Muebles",
+            "subcategorias": [
+                "Camas y catres",
+                "Mesas y sillas",
+                "Bibliotecas, armarios",
+                "Otros muebles"
+            ]
+        },
+        {
+            "nombre": "Libros",
+            "subcategorias": [
+                "Escolares",
+                "Infantiles o juveniles",
+                "Otros"
+            ]
+        },
+        {
+            "nombre": "Colchones y frazadas",
+            "subcategorias": [
+                "Sábanas/Frazadas",
+                "Colchones"
+            ]
+        },
+        {
+            "nombre": "Dinero",
+            "subcategorias": []
+        }
+    ]
+}

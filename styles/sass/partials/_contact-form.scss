@@ -1,0 +1,135 @@
+#contact {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+
+    .section__text-container {
+        text-align: center;
+        margin: auto;
+        width: 50%;
+
+        @include breakpoint {
+            width: 80%;
+        }
+    }
+
+    .form__container {
+        width: 80%;
+        margin: auto;
+
+
+        form {
+
+            fieldset {
+                border: 0;
+
+                &:first-of-type {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .field {
+                    margin: 2rem 0 .5rem;
+
+                    .input {
+                        margin: .5rem 0;
+                        padding: 1rem;
+                        border: 2px solid #ececec;
+                        border-radius: 5px 20px 20px 20px;
+                        width: 80%;
+                        font-size: 12px;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            color: #929292;
+                        }
+
+                        input {
+                            width: 100%;
+                            margin: 0 1rem;
+                            outline: none;
+                            border: none;
+                        }
+
+                    }
+
+                }
+
+                label {
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: -.5px;
+                }
+
+                #mensaje {
+                    min-width: 100%;
+                    height: 14.5rem;
+                    padding: 2rem;
+                    border-radius: 0 3rem 3rem 3rem;
+                    font-size: 14px;
+                    outline: none;
+                    border: none;
+                    background-color: #ececec;
+                    margin: 1rem 0;
+                    resize: none;
+
+                    &::placeholder {
+                        position: absolute;
+                    }
+
+                    @include breakpoint {
+                        width: 80%;
+                    }
+                }
+
+                @include breakpoint {
+                    &:first-of-type {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .field {
+                        margin: 0;
+
+                        .input {
+                            width: 100%;
+                        }
+                    }
+
+                    #mensaje {
+                        height: 20vh;
+                    }
+                }
+
+            }
+
+            .cta__container {
+                width: fit-content;
+                margin: auto;
+
+                button.sb_contact-form {
+                    font-size: .9rem;
+                    padding: .5rem 1rem;
+                    border: none;
+                    outline: none;
+                    border-radius: 2rem;
+                    background: $light-blue;
+                    color: $white;
+                    font-weight: 500;
+
+                    i {
+                        margin-left: 1rem;
+                    }
+
+                    &:hover {
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint {
+        margin-top: 5rem;
+    }
+}
