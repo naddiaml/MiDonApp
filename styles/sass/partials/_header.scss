@@ -3,7 +3,6 @@
 @import '../base/_variables.scss';
 
 header {
-
     /* Bootstrap styles - Menú hamburguesa */
     height: 4rem;
     padding: 0 4rem;
@@ -80,7 +79,7 @@ header {
         }
     }
 
-    @include breakpoint {
+    @include largeBreakpoint {
         background-color: $white;
         height: fit-content;
         padding: .8rem;

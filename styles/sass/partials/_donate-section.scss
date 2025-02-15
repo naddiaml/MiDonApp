@@ -70,9 +70,9 @@
             }
         }
 
-        @include breakpoint {
+        @include largeBreakpoint {
             width: 100%;
-            justify-content: space-between;
+            justify-content: space-evenly;
             margin: 1rem auto;
 
             .button {

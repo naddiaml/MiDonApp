@@ -22,8 +22,12 @@ body.map-body {
                 transition: margin-left .5s;
 
                 @include largeBreakpoint {
-                    margin-left: 12vw;
+                    margin-left: 15vw;
                 }
+            }
+
+            @include breakpoint {
+                margin-left: 18rem;
             }
 
             .gm-ui-hover-effect {
@@ -118,10 +122,9 @@ body.map-body {
         height: 92%;
         overflow-y: scroll;
         position: fixed;
-        top: 4rem;
+        top: 3.5rem;
         left: 0;
         background-color: $white;
-        width: 22rem;
         padding: 15px;
         transition: width 0.5s;
         margin-top: 0;
@@ -150,7 +153,7 @@ body.map-body {
             }
 
             @include largeBreakpoint {
-                width: 12vw;
+                width: 15vw;
             }
         }
 
@@ -290,6 +293,10 @@ body.map-body {
 
         .category-checkbox {
             margin-right: 10px;
+        }
+
+        @include breakpoint {
+            width: 18rem;
         }
     }
 }

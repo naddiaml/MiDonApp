@@ -146,7 +146,7 @@ section:first-of-type {
     width: 50%;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .rlayout,
   .rlayout.reverse {
     flex-direction: column;
@@ -176,7 +176,7 @@ section:first-of-type {
     width: 40%;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .clayout .clayout__text-container {
     width: 60%;
   }
@@ -184,7 +184,7 @@ section:first-of-type {
 .clayout img {
   width: 20rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .clayout {
     margin: 2rem auto;
   }
@@ -207,7 +207,7 @@ section:first-of-type {
   overflow: hidden;
   z-index: -100;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .blob-container {
     top: 90rem;
   }
@@ -223,7 +223,7 @@ section:first-of-type {
 .blob-container.right img {
   right: -10rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .blob-container.right img {
     right: -15rem;
   }
@@ -234,7 +234,7 @@ section:first-of-type {
 .blob-container.left img {
   left: -10rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .blob-container.left img {
     left: -15rem;
   }
@@ -242,17 +242,17 @@ section:first-of-type {
 .blob-container.t40 {
   top: 40rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .blob-container.t40 {
-    top: 23rem;
+    top: 25rem;
   }
 }
 .blob-container.t60 {
   top: 60rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .blob-container.t60 {
-    top: 42rem;
+    top: 50rem;
   }
 }
 .blob-container.t80 {
@@ -268,7 +268,7 @@ section:first-of-type {
   margin: auto;
   background-color: #e3e3e3;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .divider {
     margin: 2rem auto;
   }
@@ -419,7 +419,7 @@ header .button:hover {
   font-weight: 700;
   transition: 0.2s;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   header {
     background-color: #ffffff;
     height: fit-content;
@@ -558,9 +558,9 @@ header .button:hover {
     left: -100%;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .hero {
-    height: 42vh;
+    height: 30vh;
     background-size: 120%;
     background-position: center;
   }
@@ -590,7 +590,7 @@ header .button:hover {
   margin-top: 0.5rem;
   font-weight: 500;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .scroll-section .container__scroll-section {
     margin: 5rem auto;
   }
@@ -605,7 +605,7 @@ header .button:hover {
   margin: auto;
   width: 40%;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   .donate_section .section__text-container {
     width: 80%;
   }
@@ -660,10 +660,10 @@ header .button:hover {
   font-size: 0.9rem;
   line-height: 1.1rem;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1100px) {
   .donate_section .buttons-container {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 1rem auto;
   }
   .donate_section .buttons-container .button .icon {
@@ -685,7 +685,7 @@ header .button:hover {
   margin: auto;
   width: 50%;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   #contact .section__text-container {
     width: 80%;
   }
@@ -743,12 +743,12 @@ header .button:hover {
 #contact .form__container form fieldset #mensaje::placeholder {
   position: absolute;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   #contact .form__container form fieldset #mensaje {
     width: 80%;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   #contact .form__container form fieldset:first-of-type {
     display: flex;
     flex-direction: column;
@@ -783,7 +783,7 @@ header .button:hover {
 #contact .form__container form .cta__container button.sb_contact-form:hover {
   transition: 0.2s;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   #contact {
     margin-top: 5rem;
   }
@@ -1013,7 +1013,13 @@ body.map-body .map-container #map.crop {
 @media screen and (max-width: 1100px) {
   html.map-html .map-container #map.crop,
   body.map-body .map-container #map.crop {
-    margin-left: 12vw;
+    margin-left: 15vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  html.map-html .map-container #map,
+  body.map-body .map-container #map {
+    margin-left: 18rem;
   }
 }
 html.map-html .map-container #map .gm-ui-hover-effect,
@@ -1130,7 +1136,7 @@ body.map-body .map-container #map #content #bodyContent .adInfo:hover {
     background: linear-gradient(150deg, #8FD3F4, #7166EF);
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 900px) {
   html.map-html .map-container #map #content,
   body.map-body .map-container #map #content {
     width: 30vw;
@@ -1141,10 +1147,9 @@ body.map-body #sidebar {
   height: 92%;
   overflow-y: scroll;
   position: fixed;
-  top: 4rem;
+  top: 3.5rem;
   left: 0;
   background-color: #ffffff;
-  width: 22rem;
   padding: 15px;
   transition: width 0.5s;
   margin-top: 0;
@@ -1179,7 +1184,7 @@ body.map-body #sidebar.closebtn > nav {
 @media screen and (max-width: 1100px) {
   html.map-html #sidebar.closebtn,
   body.map-body #sidebar.closebtn {
-    width: 12vw;
+    width: 15vw;
   }
 }
 html.map-html #sidebar > h6,
@@ -1315,6 +1320,12 @@ body.map-body #sidebar nav ul li .subcategories li > label input[type=checkbox]:
 html.map-html #sidebar .category-checkbox,
 body.map-body #sidebar .category-checkbox {
   margin-right: 10px;
+}
+@media screen and (max-width: 900px) {
+  html.map-html #sidebar,
+  body.map-body #sidebar {
+    width: 18rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
