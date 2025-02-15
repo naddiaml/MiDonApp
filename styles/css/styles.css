@@ -1032,6 +1032,10 @@ body.map-body .map-container #map .gm-ui-hover-effect span {
   width: 20px !important;
   height: 20px !important;
 }
+html.map-html .map-container #map .gm-style-iw.gm-style-iw-c,
+body.map-body .map-container #map .gm-style-iw.gm-style-iw-c {
+  max-width: 8 0vw !important;
+}
 html.map-html .map-container #map #content,
 body.map-body .map-container #map #content {
   margin: 0.8rem;
@@ -1136,10 +1140,22 @@ body.map-body .map-container #map #content #bodyContent .adInfo:hover {
     background: linear-gradient(150deg, #8FD3F4, #7166EF);
   }
 }
+@media screen and (max-width: 1100px) {
+  html.map-html .map-container #map #content,
+  body.map-body .map-container #map #content {
+    width: 35vw;
+  }
+}
 @media screen and (max-width: 900px) {
   html.map-html .map-container #map #content,
   body.map-body .map-container #map #content {
-    width: 30vw;
+    width: 48vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  html.map-html .map-container #map #content,
+  body.map-body .map-container #map #content {
+    width: 60vw;
   }
 }
 html.map-html #sidebar,

@@ -39,6 +39,9 @@ body.map-body {
                     height: 20px !important;
                 }
             }
+            .gm-style-iw.gm-style-iw-c {
+                max-width: 8 0vw !important;
+            }
 
             #content {
                 margin: .8rem;
@@ -110,8 +113,16 @@ body.map-body {
                     }
                 }
 
+                @include largeBreakpoint {
+                    width: 35vw;
+                }
+
                 @include breakpoint {
-                    width: 30vw;
+                    width: 48vw;
+                }
+
+                @media screen and (max-width:400px) {
+                    width: 60vw;
                 }
             }
         }
