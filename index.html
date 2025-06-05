@@ -380,8 +380,9 @@
 
             function submitForm() {
                 const nombre = document.getElementById("nombre").value;
-                const telefono = document.getElementById("telefono").value;
                 const email = document.getElementById("email").value;
+                const telefono = document.getElementById("telefono").value;
+                const asunto = document.getElementById("asunto").value;
                 const message = document.getElementById("mensaje").value;
                 const submitButton = document.querySelector(".sb_contact-form");
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -392,8 +393,8 @@
 
                 const isValid =
                     nombre !== '' &&
-                    telefono.length >= 8 &&
                     emailPattern.test(email) &&
+                    telefono.length >= 8 &&
                     mensaje.trim() !== '' &&
                     isValidPhoneNumber;
 
