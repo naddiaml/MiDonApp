@@ -296,33 +296,42 @@
         </div>
         <div class="form__container">
             <form onsubmit="process(event); submitForm();" id="formContacto">
-                <fieldset>
-                    <div class="field">
-                        <label for="nombre">Nombre<span class="required">*</span></label>
-                        <div class="input">
-                            <i class="fa-solid fa-user-large"></i>
-                            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <div class="fieldset__container">
+                    <fieldset>
+                        <div class="field">
+                            <label for="nombre">Nombre<span class="required">*</span></label>
+                            <div class="input">
+                                <i class="fa-solid fa-user-large"></i>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label for="telefono">Teléfono<span class="required">*</span></label>
-                        <div class="input">
-                            <input id="telefono" type="tel" name="telefono" />
+                        <div class="field">
+                            <label for="email">Email<span class="required">*</span></label>
+                            <div class="input">
+                                <i class="fa-solid fa-at"></i>
+                                <input type="text" name="email" id="email" placeholder="nombre@dominio.com">
+                            </div>
                         </div>
-                    </div>
-                    <div class="field">
-                        <label for="email">Email<span class="required">*</span></label>
-                        <div class="input">
-                            <i class="fa-solid fa-at"></i>
-                            <input type="text" name="email" id="email" placeholder="nombre@dominio.com">
+                        <div class="field">
+                            <label for="telefono">Teléfono<span class="required">*</span></label>
+                            <div class="input">
+                                <input id="telefono" type="tel" name="telefono" />
+                            </div>
                         </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <label for="mensaje">Mensaje<span class="required">*</span></label>
-                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"
-                        placeholder="Dejanos tu mensaje acá."></textarea>
-                </fieldset>
+                        <div class="field">
+                            <label for="asunto">Asunto</label>
+                            <div class="input">
+                                <i class="fa-regular fa-comment"></i>
+                                <input type="text" name="asunto" id="asunto" placeholder="Asunto">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="mensaje">Mensaje<span class="required">*</span></label>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="10"
+                            placeholder="Dejanos tu mensaje acá."></textarea>
+                    </fieldset>
+                </div>
                 <input type="hidden" name="_next" value="">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="Nuevo contacto">
