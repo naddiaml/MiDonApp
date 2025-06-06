@@ -53,12 +53,18 @@
         top: 60rem;
             
         @include breakpoint {
-            top: 50rem;
+            left: -1.5rem;
+            top: 28rem;
+            overflow: visible;
+            transform: rotate(15deg);
         }
     }
 
     &.t80 {
         top: 80rem;
+        @include breakpoint {
+            top: 58rem;
+        }
     }
 
     &.t90 {

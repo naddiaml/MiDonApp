@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5rem auto;
+    margin: 4rem auto;
 
     .clayout__text-container {
         width: 35%;
@@ -26,9 +26,11 @@
         width: 20rem;
     }
 
-    @include breakpoint {
+    @include largeBreakpoint {
         margin: 2rem auto;
+    }
 
+    @include breakpoint {
         .clayout__text-container {
             width: 70%;
         }

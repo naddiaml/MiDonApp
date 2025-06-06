@@ -11,6 +11,12 @@
     font-family: 'Montserrat', 'Inter', sans-serif;
 }
 
+@include largeBreakpoint {
+    section.m {
+        margin-top: 15vh; 
+    }
+}
+
 .bold {
     font-weight: bold;
     color: #2F2E41;

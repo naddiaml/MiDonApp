@@ -68,6 +68,11 @@
   font-family: "Montserrat", "Inter", sans-serif;
 }
 
+@media screen and (max-width: 1100px) {
+  section.m {
+    margin-top: 15vh;
+  }
+}
 .bold {
   font-weight: bold;
   color: #2F2E41;
@@ -162,7 +167,7 @@ section:first-of-type {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
 .clayout .clayout__text-container {
   width: 35%;
@@ -184,10 +189,12 @@ section:first-of-type {
 .clayout img {
   width: 20rem;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .clayout {
     margin: 2rem auto;
   }
+}
+@media screen and (max-width: 900px) {
   .clayout .clayout__text-container {
     width: 70%;
   }
@@ -252,11 +259,19 @@ section:first-of-type {
 }
 @media screen and (max-width: 900px) {
   .blob-container.t60 {
-    top: 50rem;
+    left: -1.5rem;
+    top: 28rem;
+    overflow: visible;
+    transform: rotate(15deg);
   }
 }
 .blob-container.t80 {
   top: 80rem;
+}
+@media screen and (max-width: 900px) {
+  .blob-container.t80 {
+    top: 58rem;
+  }
 }
 .blob-container.t90 {
   top: 90rem;
@@ -516,16 +531,17 @@ header .button:hover {
   align-items: center;
   position: relative;
   background: #0b345d;
-  background-image: url(../../assets/heroImg.webp);
-  background-position: 50%;
+  background-image: url(https://images.unsplash.com/photo-1609139027234-57570f43f692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: cover;
+  background-position-y: -10rem;
   z-index: -1;
+  opacity: 0.7;
 }
 .hero .hero__img-layer {
-  background-color: #8FD3F4;
+  background-color: #0b345d;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.6;
   position: absolute;
   z-index: -10;
 }
@@ -539,30 +555,9 @@ header .button:hover {
   color: #fff;
   font-size: 1.4rem;
 }
-.hero #hero__svg-container {
-  width: 100%;
-  position: absolute;
-  bottom: -2px;
-  overflow: hidden;
-}
-.hero #hero__svg-container svg {
-  width: 200%;
-  position: relative;
-  animation: move-left 10s linear infinite;
-}
-@keyframes move-left {
-  0% {
-    left: 0%;
-  }
-  100% {
-    left: -100%;
-  }
-}
 @media screen and (max-width: 1100px) {
   .hero {
-    height: 30vh;
-    background-size: 120%;
-    background-position: center;
+    display: none;
   }
   .hero .hero__text-container {
     width: 6rem;
@@ -570,29 +565,6 @@ header .button:hover {
   }
   .hero .hero__text-container span {
     font-size: 1.1rem;
-  }
-  .hero #hero__svg-container svg {
-    animation: move-left 8s linear infinite;
-  }
-}
-
-.scroll-section .container__scroll-section {
-  margin: 5rem auto;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.scroll-section .container__scroll-section .scroll-img {
-  width: 2.8rem;
-}
-.scroll-section .container__scroll-section .scroll-text {
-  margin-top: 0.5rem;
-  font-weight: 500;
-}
-@media screen and (max-width: 900px) {
-  .scroll-section .container__scroll-section {
-    margin: 5rem auto;
   }
 }
 
@@ -673,6 +645,11 @@ header .button:hover {
   .donate_section .buttons-container .button .icon svg {
     max-width: 1.8rem;
     max-height: 1.8rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .donate_section {
+    margin-top: 5rem;
   }
 }
 
@@ -812,190 +789,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.add-org {
-  width: 80%;
-  margin: auto;
-  text-align: center;
-}
-.add-org h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.add-org p {
-  width: 70%;
-  margin: auto;
-}
-.add-org p a.addOrgForm {
-  cursor: pointer;
-  font-weight: 600;
-  color: #8FD3F4;
-}
-.add-org p a.addOrgForm:hover {
-  text-decoration: none;
-}
-.add-org .button__add-org {
-  margin: 1rem auto 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1.5rem;
-  border: none;
-  outline: none;
-  background-color: #8FD3F4;
-}
-.add-org .button__add-org a {
-  color: #ffffff;
-  font-weight: 600;
-}
-.add-org .button__add-org a:hover {
-  text-decoration: none;
-}
-
-.modal-addOrg {
-  width: 80%;
-  height: 90%;
-  margin: auto;
-}
-.modal-addOrg h2 {
-  text-align: center;
-  font-size: 17.5px;
-  margin: 4rem auto 3rem;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-.modal-addOrg .modal__close {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
-  margin: 1.5rem 3rem 2rem;
-  float: right;
-  cursor: pointer;
-}
-.modal-addOrg .modal__close span {
-  text-decoration: none;
-  color: #b5b5b5;
-  font-weight: 500;
-  font-size: 13px;
-}
-.modal-addOrg .modal__close span:hover {
-  font-weight: 600;
-  transition: 0.2s;
-  color: #6f6f6f;
-}
-.modal-addOrg .modal__close span i {
-  margin-right: 1rem;
-}
-.modal-addOrg #registrationForm {
-  height: 75%;
-}
-.modal-addOrg #registrationForm .progress-bar-container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto 3rem;
-}
-.modal-addOrg #registrationForm .progress-bar-container .step {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 20%;
-  font-weight: 500;
-}
-.modal-addOrg #registrationForm .progress-bar-container .step .step-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-.modal-addOrg #registrationForm .progress-bar-container .step .step-description {
-  text-align: center;
-  font-size: 14px;
-}
-.modal-addOrg #registrationForm #infoScreen .about-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: auto;
-}
-.modal-addOrg #registrationForm #infoScreen .about-container .about__icon {
-  text-align: center;
-  width: 20%;
-  margin-right: 1.2rem;
-  color: #8FD3F4;
-  font-size: 30px;
-}
-.modal-addOrg #registrationForm #infoScreen .about-container .about__text {
-  font-size: 15px;
-  width: 50%;
-  margin-bottom: 2rem;
-}
-.modal-addOrg #registrationForm #infoScreen .about-container .about__text p {
-  margin-top: 0.8rem;
-}
-.modal-addOrg #registrationForm .form__button-container {
-  width: fit-content;
-  margin: auto;
-}
-.modal-addOrg #registrationForm .form__button-container button {
-  margin: 1.5rem auto;
-  padding: 0.6rem 1rem;
-  background-color: #8FD3F4;
-  color: white;
-  font-weight: 600;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-.modal-addOrg #registrationForm .form__button-container button.btn-previousStep {
-  border: 1.5px solid #8FD3F4;
-  color: #8FD3F4;
-  background-color: white;
-}
-.modal-addOrg #registrationForm .step-cont .row {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-.modal-addOrg #registrationForm .step-cont .row:not(:first-child) {
-  margin: 2rem auto;
-}
-.modal-addOrg #registrationForm .step-cont .row label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.modal-addOrg #registrationForm .step-cont .row label .required {
-  color: #cf3950;
-}
-.modal-addOrg #registrationForm .step-cont .row input[type=text],
-.modal-addOrg #registrationForm .step-cont .row input[type=email] {
-  width: 100%;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #EDEDED;
-  padding: 0.2rem 0;
-  display: block;
-  font-size: 14px;
-}
-.modal-addOrg #registrationForm .step-cont .row input[type=tel] {
-  border: none;
-  outline: none;
-  font-size: 14px;
-}
-.modal-addOrg #registrationForm #step3 {
-  margin-left: 1rem;
-}
-.modal-addOrg #registrationForm #step3 .confirmacion-s3 {
-  margin-left: 2rem;
-}
-.modal-addOrg #registrationForm #step3 .confirmacion-s3 p {
-  margin-top: 1rem;
 }
 
 html.map-html,

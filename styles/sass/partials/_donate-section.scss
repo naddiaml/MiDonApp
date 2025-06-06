@@ -79,6 +79,7 @@
                 .icon {
                     width: 3.2rem;
                     height: 3.2rem;
+
                     svg {
                         max-width: 1.8rem;
                         max-height: 1.8rem;
@@ -86,5 +87,9 @@
                 }
             }
         }
+    }
+
+    @include breakpoint {
+        margin-top: 5rem;
     }
 }
